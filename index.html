@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color/Hex Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Color/Hex Generator</h1>
+
+    <div class="about-section">
+      <h2>About</h2>
+      <p>
+        Welcome to the <strong>Color/Hex Generator</strong>! This tool lets you:
+      </p>
+      <ul>
+        <li>Search colors by name or hex code.</li>
+        <li>Copy hex codes to use in your projects.</li>
+        <li>Rate palettes and see average scores from users.</li>
+      </ul>
+
+    </div>
+
+
+    <div class="search-section">
+      <input type="text" id="color-input" placeholder="Enter color name or hex (e.g. red or #ff0000)">
+      <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <div id="message" class="hidden"></div>
+
+    <!-- <button id="similar-btn">
+      <i class="fas fa-palette"></i>
+      Similar Colors
+    </button> -->
+
+    <button id="generate-btn">
+      <i class="fas fa-sync-alt"></i>
+      Generate Palette
+    </button>
+
+    <div class="palette-container">
+
+      <!-- COLOR BOX 1 -->
+      <div class="color-box">
+        <div class="color" style="background-color: #e1f5fe;"></div>
+        <div class="color-info">
+          <span class="hex-value">#E1F5FE</span>
+          <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+        </div>
+      </div>
+
+      <!-- COLOR BOX 2 -->
+      <div class="color-box">
+        <div class="color" style="background-color: #b3e5fc"></div>
+        <div class="color-info">
+          <span class="hex-value">#B3E5FC</span>
+          <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+        </div>
+      </div>
+
+      <!-- COLOR BOX 3 -->
+      <div class="color-box">
+        <div class="color" style="background-color: #81d4fa"></div>
+        <div class="color-info">
+          <span class="hex-value">#81D4FA</span>
+          <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+        </div>
+      </div>
+
+      <!-- COLOR BOX 4 -->
+      <div class="color-box">
+        <div class="color" style="background-color: #4fc3f7"></div>
+        <div class="color-info">
+          <span class="hex-value">#4FC3F7</span>
+          <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+        </div>
+      </div>
+
+      <!-- COLOR BOX 5 -->
+      <div class="color-box">
+        <div class="color" style="background-color: #29b6f6"></div>
+        <div class="color-info">
+          <span class="hex-value">#29B6F6</span>
+          <i class="far fa-copy copy-btn" title="Copy to clipboard"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <p>
+        <strong>License:</strong> All color palettes generated are free to use for personal or commercial projects.
+      </p>
+      <p>
+        <strong>Feedback:</strong> Suggestions or issues? Contact: <a href="mailto:workcodevs@gmail.com">Here</a>
+      </p>
+    </div>
+
+    <div class="rating-section">
+      <h3>Rate?</h3>
+      <div class="stars" id="rating-stars">
+        <i class="fas fa-star" data-value="1"></i>
+        <i class="fas fa-star" data-value="2"></i>
+        <i class="fas fa-star" data-value="3"></i>
+        <i class="fas fa-star" data-value="4"></i>
+        <i class="fas fa-star" data-value="5"></i>
+      </div>
+      <p id="rating-result"></p>
+
+      <!-- Single summary bar -->
+      <div class="rating-summary">
+        <div id="rating-bar" style="width:0%;"></div>
+        <span id="rating-text"> 0 votes (0%)</span>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
